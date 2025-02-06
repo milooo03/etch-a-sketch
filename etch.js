@@ -13,7 +13,7 @@ container.appendChild(p);
 let grids = container.querySelectorAll(".track");
 
 grids.forEach((item) => {
-    item.addEventListener("mousemove", (event) => {
-        p.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;    
+    item.addEventListener("mouseover", () => {
+        item.style.backgroundColor = "grey";
 });
 });
