@@ -6,11 +6,11 @@
 #container {
     display: flex;
     border: solid 5px black;
-    width: 490px;
-    height: auto;
+    width: 480px;
+    height: 480px;
     flex-flow: wrap;
     justify-content: center;
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 .square {
@@ -19,4 +19,11 @@
     width: 30px;
     height: 30px;
     margin: 0px;
+}
+
+button {
+    display: block;
+    padding: 10px;
+    margin: 20px auto;
+    font-weight: bold;
 }
