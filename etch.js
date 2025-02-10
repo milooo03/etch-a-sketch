@@ -15,14 +15,13 @@ function gridSize(size) {
 
 //Select all grids and add color changing properties to them
 function changeGridColor() {
-    let grids = container.querySelectorAll(".square");
-
-    grids.forEach((item) => {
-        item.addEventListener("mouseover", () => {
-            item.style.backgroundColor = "grey";
-    });
-    });
-}
+    container.addEventListener("mouseover", (event) => {
+        let target = event.target;
+        if (target.matches(".square")) {
+            target.style.backgroundColor = "grey";
+        }
+    })
+};
 
 gridSize(16);
 changeGridColor();
