@@ -16,8 +16,6 @@
 .square {
     box-sizing: border-box;
     border: solid 1px grey;
-    width: 30px;
-    height: 30px;
     margin: 0px;
 }
 
