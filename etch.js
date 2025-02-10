@@ -7,6 +7,7 @@ function gridSize(size) {
     for (let i = 0; i < (size * size); i++) {
         let grid = document.createElement("div");
         grid.classList.add("square");
+        grid.dataset.flag = "false";
         grid.style.width = `${newSize}px`;
         grid.style.height = `${newSize}px`;
         container.appendChild(grid);
@@ -17,8 +18,12 @@ function gridSize(size) {
 function changeGridColor() {
     container.addEventListener("mouseover", (event) => {
         let target = event.target;
-        if (target.matches(".square")) {
-            target.style.backgroundColor = "grey";
+        if (target.matches(".square") && target.dataset.flag === "false") {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            target.style.background = `rgb(${r} ${g} ${b})`;
+            target.dataset.flag = "true";
         }
     })
 };
